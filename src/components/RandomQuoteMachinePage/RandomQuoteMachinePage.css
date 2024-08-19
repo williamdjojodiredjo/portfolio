@@ -1,0 +1,48 @@
+.random-quote-machine {
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#quote-box {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 80%;
+}
+
+#text {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#author {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new-quote, #tweet-quote {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-quote:hover, #tweet-quote:hover {
+    background-color: #21a1f1;
+}

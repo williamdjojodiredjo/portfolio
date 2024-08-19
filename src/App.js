@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage/HomePage';
+import TodoListPage from './components/TodoListPage/TodoListPage';
+import RandomQuoteMachinePage from './components/RandomQuoteMachinePage/RandomQuoteMachinePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/todo-list" element={<TodoListPage />} />
+        <Route path="/random-quote-machine" element={<RandomQuoteMachinePage />} />
+      </Routes>
+    </Router>
+  ); 
 }
 
 export default App;
