@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "gh-pages-clean": "rm -rf node_modules/.cache/gh-pages"
+    "gh-pages-clean": "rimraf node_modules/.cache/gh-pages"
   },
   "eslintConfig": {
     "extends": [
