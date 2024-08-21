@@ -9,6 +9,7 @@ function NavBar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/todo-list">Todo List</Link></li>
         <li><Link to="/random-quote-machine">Random Quote Generator</Link></li>
+        <li><Link to="/markdown-previewer">Markdown Previewer</Link></li>
       </ul>
     </nav>
   );
