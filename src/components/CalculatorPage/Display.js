@@ -3,9 +3,9 @@ import './Display.css';
 
 function Display({ input, result }) {
   return (
-    <div id="display">
-      <div id="input">{input}</div>
-      <div id="result">{result}</div>
+    <div id="calc-display">
+      <div id="calc-input">{input}</div>
+      <div id="calc-result">{result}</div>
     </div>
   );
 }

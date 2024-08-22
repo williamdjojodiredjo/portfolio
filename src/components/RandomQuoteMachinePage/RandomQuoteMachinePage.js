@@ -44,7 +44,7 @@ function RandomQuoteMachinePage() {
         <div id="quote-box">
           <p id="text">"{quote.text}"</p>
           <p id="author">- {quote.author}</p>
-          <div id='buttons'>
+          <div id='quote-buttons'>
             <a
               id="tweet-quote"
               href={`https://twitter.com/intent/tweet?text="${quote.text}" - ${quote.author}`}

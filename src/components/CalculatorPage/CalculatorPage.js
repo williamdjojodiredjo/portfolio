@@ -10,7 +10,6 @@ function Calculator() {
 
   const calculateResult = (input) => {
     try {
-      // Regular expressions to split the input into numbers and operators
       const numbers = input.split(/[-+*/]/).map(Number);
       const operators = input.replace(/[0-9]|\./g, '').split('');
 
@@ -58,7 +57,7 @@ function Calculator() {
       <div id="calculator-wrapper">
         <div id="calculator">
           <Display input={input} result={result} />
-          <div id="buttons">
+          <div id="calc-buttons">
             {['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '=', '+', 'C'].map((buttonValue) => (
               <Button key={buttonValue} value={buttonValue} onClick={handleButtonClick} />
             ))}

@@ -64,7 +64,7 @@ function DrumMachinePage() {
                 <span className="slider round"></span>
               </label>
             </div>
-            <div id="display">{display}</div>
+            <div id="drum-display">{display}</div>
             <div className="volume-control">
               <input
                 type="range"
