@@ -11,6 +11,7 @@ function NavBar() {
         <li><Link to="/random-quote-machine">Random Quote Generator</Link></li>
         <li><Link to="/markdown-previewer">Markdown Previewer</Link></li>
         <li><Link to="/drum-machine">Drum Machine</Link></li>
+        <li><Link to="/calculator">JavaScript Calculator</Link></li>
       </ul>
     </nav>
   );
