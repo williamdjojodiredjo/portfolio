@@ -5,6 +5,7 @@ import TodoListPage from './components/TodoListPage/TodoListPage';
 import RandomQuoteMachinePage from './components/RandomQuoteMachinePage/RandomQuoteMachinePage';
 import MarkdownPreviewerPage from './components/MarkdownPreviewerPage/MarkdownPreviewerPage';
 import DrumMachinePage from './components/DrumMachinePage/DrumMachinePage';
+import CalculatorPage from './components/CalculatorPage/CalculatorPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/random-quote-machine" element={<RandomQuoteMachinePage />} />
         <Route path='/markdown-previewer' element={<MarkdownPreviewerPage />} />
         <Route path='/drum-machine' element={<DrumMachinePage />} />
+        <Route path='/calculator' element={<CalculatorPage />} />
       </Routes>
     </Router>
   ); 
