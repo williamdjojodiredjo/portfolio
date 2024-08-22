@@ -1,0 +1,24 @@
+/* src/components/DrumPad/DrumPad.css */
+
+.drum-pad {
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.drum-pad:hover {
+  background-color: #888;
+}
+
+.drum-pad:active {
+  background-color: #555;
+}
+
+.clip {
+  display: none; /* Hide the audio element */
+}
