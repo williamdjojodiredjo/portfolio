@@ -8,7 +8,6 @@ function DrumPad({ keyTrigger, sound, label, updateDisplay, power, volume }) {
       audio.volume = volume;
       audio.currentTime = 0;
 
-      // Check if the audio is ready to play
       const playPromise = audio.play();
       
       if (playPromise !== undefined) {

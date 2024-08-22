@@ -1,5 +1,3 @@
-/* src/components/DrumPad/DrumPad.css */
-
 .drum-pad {
   background-color: #444;
   color: white;
@@ -20,5 +18,5 @@
 }
 
 .clip {
-  display: none; /* Hide the audio element */
+  display: none; 
 }

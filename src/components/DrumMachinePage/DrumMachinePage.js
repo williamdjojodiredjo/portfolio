@@ -35,7 +35,7 @@ function DrumMachinePage() {
     const volumeValue = event.target.value;
     setVolume(volumeValue);
     setDisplay(`Volume: ${Math.round(volumeValue * 100)}`);
-    setTimeout(() => setDisplay(''), 1000); // Clear display after 1 second
+    setTimeout(() => setDisplay(''), 1000);
   };
 
   return (
