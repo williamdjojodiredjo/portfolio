@@ -5,18 +5,58 @@
   margin: 20px;
 }
 
-#editor {
+.editor-section, .preview-section {
   width: 80%;
-  height: 200px;
   margin-bottom: 20px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+}
+
+.editor-header, .preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.editor-header h2, .preview-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.editor-header button, .preview-header button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#editor {
+  width: 100%;
+  height: 200px;
   padding: 10px;
   font-size: 16px;
+  border: none;
+  resize: none;
+}
+
+#editor.expanded {
+  height: 400px; /* Expanded height */
 }
 
 #preview {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   background-color: #f4f4f4;
-  border: 1px solid #ddd;
+  border: none;
   min-height: 200px;
+}
+
+#preview.expanded {
+  min-height: 400px; /* Expanded height */
+}
+
+.editor-section.expanded #editor,
+.preview-section.expanded #preview {
+  height: 400px; /* Adjust to your desired height when expanded */
 }

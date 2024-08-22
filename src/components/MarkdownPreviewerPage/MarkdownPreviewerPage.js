@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { marked } from 'marked';
 import './MarkdownPreviewerPage.css';
 import NavBar from '../NavBar/NavBar';
-import image1 from '../Images/Image1.jpg'
+import image1 from '../Images/Image1.jpg';
 
 // Configure marked to interpret carriage returns as <br> elements
 marked.setOptions({
@@ -15,7 +15,7 @@ const MarkdownPreviewerPage = () => {
 
 ## Subheading Element (H2)
 
-This is a [link](https://www.example.com) to an example website.
+This is a [link](https://williamdjojodiredjo.github.io/portfolio) to an example website.
 
 Here is some \`inline code\`.
 
@@ -34,8 +34,19 @@ This is a code block.
 **This text is bolded.**
 `);
 
+  const [isEditorExpanded, setIsEditorExpanded] = useState(false);
+  const [isPreviewExpanded, setIsPreviewExpanded] = useState(false);
+
   const handleChange = (e) => {
     setMarkdown(e.target.value);
+  };
+
+  const toggleEditorExpand = () => {
+    setIsEditorExpanded(!isEditorExpanded);
+  };
+
+  const togglePreviewExpand = () => {
+    setIsPreviewExpanded(!isPreviewExpanded);
   };
 
   const getMarkdownText = () => {
@@ -46,15 +57,33 @@ This is a code block.
     <div>
       <NavBar />
       <div className="markdown-previewer">
-        <textarea
-          id='editor' 
-          value={markdown}
-          onChange={handleChange}
-        />
-        <div 
-          id='preview'
-          dangerouslySetInnerHTML={getMarkdownText()}
-        />
+        <div className={`editor-section ${isEditorExpanded ? 'expanded' : ''}`}>
+          <div className="editor-header">
+            <h2>Editor</h2>
+            <button onClick={toggleEditorExpand}>
+              {isEditorExpanded ? 'Collapse' : 'Expand'}
+            </button>
+          </div>
+          <textarea
+            id='editor' 
+            value={markdown}
+            onChange={handleChange}
+            className={isEditorExpanded ? 'expanded' : ''}
+          />
+        </div>
+        <div className={`preview-section ${isPreviewExpanded ? 'expanded' : ''}`}>
+          <div className="preview-header">
+            <h2>Previewer</h2>
+            <button onClick={togglePreviewExpand}>
+              {isPreviewExpanded ? 'Collapse' : 'Expand'}
+            </button>
+          </div>
+          <div 
+            id='preview'
+            className={isPreviewExpanded ? 'expanded' : ''}
+            dangerouslySetInnerHTML={getMarkdownText()}
+          />
+        </div>
       </div>
     </div>
   );
